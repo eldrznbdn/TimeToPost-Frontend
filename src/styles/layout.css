@@ -1,0 +1,43 @@
+.layout {
+    background: linear-gradient(#73766c, rgb(164, 183, 146));
+}
+.layout__container {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a{
+    margin-left: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.logout__btn {
+    width: 150px;
+    background-color: #fff;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin-right: 10px;
+    color: #73766c;
+    cursor: pointer;
+}
+
+.registration__links{
+    margin-right: 50px;
+}
+
+.logged__in {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.layout h1 {
+    color: #fff;
+}

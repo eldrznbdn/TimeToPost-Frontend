@@ -1,0 +1,24 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.post {
+    border: 1px solid black;
+    width: 250px;
+}
+
+
+.bottom_part {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link{
+    color: rgb(157, 132, 101);
+}
+
