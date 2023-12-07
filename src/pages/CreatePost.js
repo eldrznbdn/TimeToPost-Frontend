@@ -20,7 +20,7 @@ const CreatePost = () => {
                 alert(response.data.error)
             }
             else {
-                navigate('/')
+                navigate('/news')
             }
         })
     }
