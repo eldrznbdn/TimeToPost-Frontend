@@ -13,11 +13,11 @@ const Profile = () => {
     const [user, setUser] = useState({})
     const [posts, setPosts] = useState([])
     useEffect(() => {
-        axios.get(`http://localhost:3002/auth/profile/${id}`).then((response) => {
+        axios.get(`https://time-to-post-08607128c1ae.herokuapp.com/auth/profile/${id}`).then((response) => {
             setUser(response.data)
         })
 
-        axios.get(`http://localhost:3002/posts/byuserid/${id}`).then((response) => {
+        axios.get(`https://time-to-post-08607128c1ae.herokuapp.com/posts/byuserid/${id}`).then((response) => {
             setPosts(response.data)
         })
 
@@ -27,7 +27,7 @@ const Profile = () => {
         const isConfirmed = window.confirm(`Are you sure you want to delete this post? You won't be able to restore it!!!`);
 
         if (isConfirmed) {
-            axios.delete(`http://localhost:3002/posts/${id}`, {
+            axios.delete(`https://time-to-post-08607128c1ae.herokuapp.com/posts/${id}`, {
                 headers: {
                     accessToken: localStorage.getItem("accessToken")
                 }

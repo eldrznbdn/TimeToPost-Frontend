@@ -13,7 +13,7 @@ const Registration = () => {
     }
 
     const onSubmit = (data) => {
-        axios.post('http://localhost:3002/auth', data).then((response) => {
+        axios.post('https://time-to-post-08607128c1ae.herokuapp.com/auth', data).then((response) => {
             navigate('/login')
         })
     }

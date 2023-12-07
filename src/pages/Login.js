@@ -17,7 +17,7 @@ const Login = () => {
             password: password,
         }
 
-        axios.post('http://localhost:3002/auth/login', data).then((response) => {
+        axios.post('https://time-to-post-08607128c1ae.herokuapp.com/auth/login', data).then((response) => {
             if (response.data.error) {
                 alert(response.data.error)
             } else {

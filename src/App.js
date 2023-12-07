@@ -19,7 +19,7 @@ function App() {
   })
 
   useEffect(() => {
-    axios.get('http://localhost:3002/auth/auth', {
+    axios.get('https://time-to-post-08607128c1ae.herokuapp.com/auth/auth', {
       headers: {
         accessToken: localStorage.getItem("accessToken")
       }

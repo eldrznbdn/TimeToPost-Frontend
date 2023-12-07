@@ -9,7 +9,7 @@ const Home = () => {
     const navigate = useNavigate()
     const [posts, setPosts] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:3002/posts').then(response => {
+        axios.get('https://time-to-post-08607128c1ae.herokuapp.com/posts').then(response => {
             setPosts(response.data)
         })
     }, [])

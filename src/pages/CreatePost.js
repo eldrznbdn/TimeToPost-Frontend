@@ -13,7 +13,7 @@ const CreatePost = () => {
     }
 
     const onSubmit = (data) => {
-        axios.post('http://localhost:3002/posts', data, {
+        axios.post('https://time-to-post-08607128c1ae.herokuapp.com/posts', data, {
             headers: { accessToken: localStorage.getItem("accessToken") },
         }).then((response) => {
             if (response.data.error) {

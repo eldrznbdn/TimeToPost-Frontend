@@ -7,7 +7,7 @@ const ChangePassword = () => {
     const [newPassword, setNewPassword] = useState("")
     const navigate = useNavigate()
     const changePassword = () => {
-        axios.put("http://localhost:3002/auth/changepassword", { oldPassword: oldPassword, newPassword: newPassword }, {
+        axios.put("https://time-to-post-08607128c1ae.herokuapp.com/auth/changepassword", { oldPassword: oldPassword, newPassword: newPassword }, {
             headers: {
                 accessToken: localStorage.getItem("accessToken")
             }

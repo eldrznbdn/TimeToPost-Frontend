@@ -13,11 +13,11 @@ const Post = () => {
     const { authState } = useContext(AuthContext)
 
     useEffect(() => {
-        axios.get(`http://localhost:3002/posts/byid/${id}`).then(response => {
+        axios.get(`https://time-to-post-08607128c1ae.herokuapp.com/posts/byid/${id}`).then(response => {
             setPost(response.data)
         })
 
-        axios.get(`http://localhost:3002/comments/${id}`).then((response) => {
+        axios.get(`https://time-to-post-08607128c1ae.herokuapp.com/comments/${id}`).then((response) => {
             setComments(response.data);
         });
     }, [])
@@ -25,7 +25,7 @@ const Post = () => {
 
     const addComment = () => {
         axios.post(
-            "http://localhost:3002/comments",
+            "https://time-to-post-08607128c1ae.herokuapp.com/comments",
             {
                 commentBody: newComment,
                 PostId: id,
@@ -49,7 +49,7 @@ const Post = () => {
                     setComments([...comments, commentToAdd]);
 
                     // Fetch the updated comments
-                    axios.get(`http://localhost:3002/comments/${id}`).then((response) => {
+                    axios.get(`https://time-to-post-08607128c1ae.herokuapp.com/comments/${id}`).then((response) => {
                         setComments(response.data);
                     });
 
@@ -63,7 +63,7 @@ const Post = () => {
 
     const deleteComment = (id) => {
         axios
-            .delete(`http://localhost:3002/comments/${id}`, {
+            .delete(`https://time-to-post-08607128c1ae.herokuapp.com/comments/${id}`, {
                 headers: { accessToken: localStorage.getItem("accessToken") },
             })
             .then(() => {
@@ -78,7 +78,7 @@ const Post = () => {
     };
 
     const deletePost = (id) => {
-        axios.delete(`http://localhost:3002/posts/${id}`, {
+        axios.delete(`https://time-to-post-08607128c1ae.herokuapp.com/posts/${id}`, {
             headers: {
                 accessToken: localStorage.getItem("accessToken")
             }
